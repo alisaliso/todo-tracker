@@ -1,6 +1,6 @@
 # Vue Todo App
 
-Vue.js ToDo application
+Vue.js ToDo application with [nes.css](https://github.com/nostalgic-css/NES.css/)
 
 ![Application Example](./img.png)
 
