@@ -1,9 +1,11 @@
 <template>
   <div id="app" class="container">
     <div class="date_wrap">
-      <div class="month">{{ moment().format("MMM") }}</div>
       <div class="date">{{ moment().format("D") }}</div>
-      <div class="day">{{ moment().format("dddd") }}</div>
+      <div class="month-day">
+        <div class="month">{{ moment().format("MMM") }}</div>
+        <div class="day">{{ moment().format("dddd") }}</div>
+      </div>
     </div>
     <AddTodo v-on:add-todo="addTodo" />
     <Todos v-bind:todos="todos" v-on:delete-todo="deleteTodo" />
@@ -25,41 +27,41 @@ export default {
         {
           id: 1,
           title: "Go workout",
-          checked: true,
+          checked: true
         },
         {
           id: 2,
           title: "Do laundry",
-          checked: false,
+          checked: false
         },
         {
           id: 3,
           title: "Cook food",
-          checked: false,
+          checked: false
         },
         {
           id: 4,
           title: "Clean up room",
-          checked: true,
+          checked: true
         },
         {
           id: 5,
           title: "Finish work",
-          checked: false,
-        },
+          checked: false
+        }
       ],
-      date: null,
+      date: null
     };
   },
   methods: {
     addTodo(newTodo) {
-      this.todos = [...this.todos, newTodo];
+      this.todos = [newTodo, ...this.todos];
     },
     deleteTodo(todoId) {
-      this.todos = this.todos.filter((todo) => todo.id !== todoId);
+      this.todos = this.todos.filter(todo => todo.id !== todoId);
     },
-    moment,
-  },
+    moment
+  }
 };
 </script>
 
@@ -119,17 +121,8 @@ del {
 }
 
 .date_wrap {
-  position: relative;
   display: inline-flex;
   margin-bottom: 50px;
-}
-
-.month {
-  font-size: 36px;
-  margin-left: 10px;
-  position: absolute;
-  right: -50px;
-  line-height: 40px;
 }
 
 .date {
@@ -138,12 +131,15 @@ del {
   line-height: 70px;
 }
 
+.month {
+  font-size: 36px;
+  margin-left: 6px;
+  line-height: 34px;
+}
+
 .day {
   font-size: 36px;
-  margin-left: 10px;
-  position: absolute;
-  right: -93px;
-  bottom: 0;
+  margin-left: 6px;
   line-height: 38px;
 }
 </style>

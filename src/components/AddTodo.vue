@@ -3,7 +3,7 @@
     type="text"
     v-model="title"
     name="title"
-    class="nes-input"
+    class="input nes-input"
     placeholder="Add todo..."
     v-on:keyup.enter="addTodo"
   />
@@ -33,17 +33,7 @@ export default {
 </script>
 
 <style>
-.form {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
 .input {
-  width: 75%;
-}
-
-.button {
-  font-size: 25px;
-  width: 18%;
+  font-size: 22px;
 }
 </style>

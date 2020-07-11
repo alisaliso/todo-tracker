@@ -49,4 +49,9 @@ export default {
   display: flex;
   align-items: center;
 }
+
+.nes-btn {
+  width: 35px;
+  font-size: 18px;
+}
 </style>

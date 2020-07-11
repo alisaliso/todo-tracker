@@ -1,4 +1,4 @@
-# Productiver
+# todo-app
 
 ## Development
 
@@ -8,8 +8,6 @@ $ docker-compose up
 
 # Terminal 2
 $ docker-compose exec app sh
-$ cd todo-app
-$ npm run serve
+$ > yarn install
+$ > yarn start
 ```
-
-## Structure
