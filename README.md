@@ -1,4 +1,8 @@
-# todo-app
+# Vue Todo App
+
+Vue.js ToDo application
+
+![Application Example](./img.png)
 
 ## Development
 
@@ -8,6 +12,5 @@ $ docker-compose up
 
 # Terminal 2
 $ docker-compose exec app sh
-$ > yarn install
-$ > yarn start
+$ > npm run serve
 ```
